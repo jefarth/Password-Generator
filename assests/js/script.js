@@ -1,14 +1,3 @@
-// Create prompts for password criteria
-// when button is clicked
-
-// Choose password length bteween 8-128 char
-
-// Choose character types to include in password
-// lowercase, uppercase, numeric, and/or special
-
-// Take prompt inputs and generate appropriate password in textarea
-
-
 // Assignment Code
 // Global Variables
 var generateBtn = document.querySelector(`#generate`);
