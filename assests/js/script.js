@@ -11,11 +11,11 @@
 
 // Assignment Code
 // Global Variables
-const generateBtn = document.querySelector(`#generate`);
-const lowerCase = `abcdefghijklmnopqrstuvwxyz`;
-const upperCase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
-const number = `0123456789`;
-const special = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
+var generateBtn = document.querySelector(`#generate`);
+var lowerCase = `abcdefghijklmnopqrstuvwxyz`;
+var upperCase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+var number = `0123456789`;
+var special = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
 var passwordLength;
 var upperCheck;
 var numberCheck;
@@ -45,7 +45,7 @@ function checkLength() {
 
     // If all criteria met, set the password length to user preference and end the function
   } else {
-    alert(`Password length set. The following screens will allow you to choose if you want to include special characters.`);
+    alert(`Password length set. The following screens will allow you to choose if you want to include special password criteria. \nIf you choose "No" for every prompt your password will only contain lowercase letters.`);
   }
 
   // Call the completed function
@@ -59,7 +59,8 @@ function checkUpper() {
   // Sets user input to lowercase to avoid errors
   upperCheck = upperCheck.toLowerCase();
 
-  //  Checks if the user left blank instead of entering Yes or No, re-runs the function if true
+
+  //  Checks if the user left text blank instead of entering Yes or No, re-runs the function if true
   if (upperCheck === null || upperCheck === "") {
     alert(`Please enter Yes or No`);
     checkUpper();
@@ -85,11 +86,36 @@ function checkUpper() {
 
 // Create function to ask if user wants to use numbers
 function checkNumber() {
-  
+  numberCheck = prompt(`Please choose if you would like to include numbers in your password. \n(Yes or No)`);
+  // Sets user input to lowercase to avoid errors
+  numberCheck = numberCheck.toLowerCase();
+
+
+  //  Checks if the user left text blank instead of entering Yes or No, re-runs the function if true
+  if (numberCheck === null || numberCheck === "") {
+    alert(`Please enter Yes or No`);
+    checkNumber();
+
+    // Checks if the user answered Yes
+  } else if (numberCheck ===`yes` || numberCheck === `y`) {
+    numberCheck = true;
+    return numberCheck;
+
+    // Checks if the user answered No
+  } else if (numberCheck ===`no` || numberCheck === `n`) {
+    numberCheck = false;
+    return numberCheck;
+
+    // Checks if the user answered with any other key, re-runs the function if true
+  } else {
+    alert(`Please answer Yes or No`);
+    checkNumber();
+  }
+  return numberCheck;
 }
 
 
-// Create function to ask if user wants to use special char
+// Create function to ask if user wants to use special characters
 function checkSpecial() {
 
 }
@@ -107,7 +133,6 @@ function generatePassword() {
   console.log(specialCheck);
 
 }
-
 
 // Write password to the #password input
 function writePassword() {
