@@ -156,16 +156,63 @@ function generatePassword() {
   checkSpecial();
   console.log(specialCheck);
 
+
+  // Sets password value to nothing
+let lower = lowerCase;
+let password = "";
+
+// If user selects all prompts add all options together
+if (upperCheck && numberCheck && specialCheck){
+  lower += upperCase + number + special;
+
+// If user selects Uppercase and Numbers add only those options to Lowercase password
+}else if (upperCheck && numberCheck){
+  lower += upperCase + number;
+
+// If user selects Number and Special add only those options to Lowercase password
+}else if (numberCheck && specialCheck){
+  lower += number + special;
+
+// If user selects Uppercase and Special add only those options to Lowercase password
+}else if (upperCheck && specialCheck){
+  lower += upperCase + special;
+
+// If user only selects Uppercase add only that option to Lowercase password
+}else if (upperCheck){
+  lower += upperCase;
+
+// If user only selects Numbers add only that option to Lowercase password
+}else if(numberCheck){
+  lower += number;
+
+// If user only selects Special characters add only that option to Lowercase password
+}else if (specialCheck){
+  lower += special;
+
+//If user denies all prompts only use a Lowercase password 
+}else{
+  lower === lowerCase;
+}
+
+// Use math.random to generate a random password from prompt criteria
+  for(var i = 0; i < passwordLength; i++){
+    password += lower.charAt(Math.floor(Math.random() * lower.length));
+  }
+  return password;
 }
 
 // Write password to the #password input
 function writePassword() {
-  const password = generatePassword();
+
+
+  // Reset password box and criteria everytime button is clicked
+  let password1 = "";
+  password1 = generatePassword();
+
+  // Send generated password to the "password" textfield on the HTML document
   const passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  passwordText.value = password1;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
