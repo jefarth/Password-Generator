@@ -117,7 +117,31 @@ function checkNumber() {
 
 // Create function to ask if user wants to use special characters
 function checkSpecial() {
+  specialCheck = prompt(`Please choose if you would like to include special characters in your password. \n(Yes or No)`);
+  // Sets user input to lowercase to avoid errors
+  specialCheck = specialCheck.toLowerCase();
 
+    //  Checks if the user left text blank instead of entering Yes or No, re-runs the function if true
+    if (specialCheck === null || specialCheck === "") {
+      alert(`Please enter Yes or No`);
+      checkSpecial();
+  
+      // Checks if the user answered Yes
+    } else if (specialCheck ===`yes` || specialCheck === `y`) {
+      specialCheck = true;
+      return specialCheck;
+  
+      // Checks if the user answered No
+    } else if (specialCheck ===`no` || specialCheck === `n`) {
+      specialCheck = false;
+      return specialCheck;
+  
+      // Checks if the user answered with any other key, re-runs the function if true
+    } else {
+      alert(`Please answer Yes or No`);
+      checkSpecial();
+    }
+    return specialCheck;
 }
 
 
