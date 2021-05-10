@@ -10,15 +10,16 @@
 
 
 // Assignment Code
+// Global Variables
 const generateBtn = document.querySelector(`#generate`);
 const lowerCase = `abcdefghijklmnopqrstuvwxyz`;
 const upperCase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 const number = `0123456789`;
 const special = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
-const passwordLength;
-const uppercaseCheck;
-const numberCheck;
-const specialCheck;
+var passwordLength;
+var uppercaseCheck;
+var numberCheck;
+var specialCheck;
 
 // Create function to determine length of password
 
