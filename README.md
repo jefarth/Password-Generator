@@ -1,35 +1,33 @@
-# READ ME
+# Password Generator
+  [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
-![Password_Generator](./assests/images/Password_Generator.png)
+  ## Description
+This application allows a user to create a new secure password. When working with sensitive data a user can use this application to generate a random password with specific criteria.
 
-## Check out the website here
-[Live Password Generator](https://jefarth.github.io/Password-Generator/)
+## Table of Contents 
 
-***
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-## User Story
+## Installation
+The following necessary dependencies must be installed to run the application properly: To install this project you must create an empty repository on your local machine first. After that copy the SSH key under the "code" tab and open a terminal on your new repository. Use the "git clone" prompt to clone the repository to your local repository.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Usage
+To use this application: This application can be accessed at a live site here: [Live Password Generator](https://jefarth.github.io/Password-Generator/) 
 
-## Description of application
+## License
+This project is licensed under the MIT License.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+## Contributing
+Contributing: I wrote all of the javascript to make the app function.
+
+## Tests
+To run tests, you need to run the following command: Reloading the browser to check for errors.
+
+## Questions
+If you have any questions about the repo, please contact "jefarth" directly at jefarth.dev@gmail.com.
+
