@@ -25,7 +25,7 @@ To use this application: This application can be accessed at a live site here: [
 This project is licensed under the MIT License.
 
 ## Contributing
-Contributing: I wrote all of the javascript to make the app function.
+Contributing: I wrote all of the Javascript to make the app function.
 
 ## Tests
 To run tests, you need to run the following command: Reloading the browser to check for errors.
