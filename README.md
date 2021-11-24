@@ -1,6 +1,8 @@
 # Password Generator
   [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 
+  ![Password_Generator](./assests/images/Password_Generator.png)
+
   ## Description
 This application allows a user to create a new secure password. When working with sensitive data a user can use this application to generate a random password with specific criteria.
 
